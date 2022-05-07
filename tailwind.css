@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .btn {
+        @apply py-1 px-4 font-semibold text-sm rounded-lg shadow-md cursor-pointer;
+    }
+
+    .btn-gray {
+        @apply border bg-white text-gray-800 hover:bg-gray-200;
+    }
+
+    .btn-red {
+        @apply text-white bg-red-700 hover:bg-red-400;
+    }
+
+    .btn-blue {
+        @apply text-white bg-blue-700 hover:bg-blue-400;
+    }
+
+    .btn-green {
+        @apply text-white bg-green-800 hover:bg-green-600;
+    }
+
+    .btn-yellow {
+        @apply text-white bg-yellow-700 hover:bg-yellow-400;
+    }
+
+    .button-blue {
+        @apply py-1 px-4 bg-blue-500 text-white font-semibold rounded text-sm shadow-md hover:bg-blue-700;
+    }
+
+    .tag-gray {
+        @apply rounded-lg px-2 bg-gray-400 text-white text-xs
+    }
+
+    .tag-blue {
+        @apply rounded-lg px-2 bg-blue-500 text-white text-xs
+    }
+
+    .tag-green {
+        @apply rounded-lg px-2 bg-green-500 text-white text-xs
+    }
+
+    .tag-red {
+        @apply rounded-lg px-2 bg-red-700 text-white text-xs
+    }
+
+    .tag-yellow {
+        @apply rounded-lg px-2 bg-yellow-500 text-white text-xs
+    }
+}
