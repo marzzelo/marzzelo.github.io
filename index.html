@@ -477,20 +477,26 @@
 <div class="min-h-screen bg-gray-100">
 
 	<!-- Page Heading -->
-	<header class="bg-blue-900 text-white">
+	<header class="bg-slate-800 text-white">
 		<div x-data class="w-full xl:max-w-6xl mx-auto shadow-lg">
 			<div class="flex flex-col sm:flex-row sm:justify-around font-bold text-4xl sm:text-lg">
-				<div @click="$store.tabs.current = 'home'" class="hover:bg-black hover:text-yellow-500 w-full mx-auto text-center py-4 cursor-pointer">
+				<div @click="$store.tabs.current = 'home'"
+					 :class='{ "bg-blue-800 uppercase": $store.tabs.current === "home" }'
+					 class="hover:text-yellow-300 hover:text-5xl sm:hover:text-xl w-full mx-auto text-center py-4 cursor-pointer">
 					home
 				</div>
-				<div @click="$store.tabs.current = 'about'" class="hover:bg-black hover:text-yellow-500 w-full mx-auto text-center py-4 cursor-pointer">
+				<div @click="$store.tabs.current = 'about'"
+					 :class='{ "bg-blue-800 uppercase": $store.tabs.current === "about" }'
+					 class="hover:text-yellow-300 hover:text-5xl sm:hover:text-xl w-full mx-auto text-center py-4 cursor-pointer">
 					about
 				</div>
 				<div @click="$store.tabs.current = 'projects'"
-					 class="hover:bg-black hover:text-yellow-500 w-full mx-auto text-center py-4 cursor-pointer">projects
+					 :class='{ "bg-blue-800 uppercase": $store.tabs.current === "projects" }'
+					 class="hover:text-yellow-300 hover:text-5xl sm:hover:text-xl w-full mx-auto text-center py-4 cursor-pointer">projects
 				</div>
 				<div @click="$store.tabs.current = 'contact'"
-					 class="hover:bg-black hover:text-yellow-500 w-full mx-auto text-center py-4 cursor-pointer">contact
+					 :class='{ "bg-blue-800 uppercase": $store.tabs.current === "contact" }'
+					 class="hover:text-yellow-300 hover:text-5xl sm:hover:text-xl w-full mx-auto text-center py-4 cursor-pointer">contact
 				</div>
 			</div>
 		</div>
@@ -498,20 +504,20 @@
 
 	<!-- Page Content -->
 	<main>
-		<div x-data class="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-			<div x-show="$store.tabs.current === 'home'">
+		<div x-data class="max-w-6xl mx-auto py-6 px-4 xl:px-0 min-h-screen">
+			<div class='p-8 rounded rounded-xl bg-white' x-show="$store.tabs.current === 'home'">
 				<h1>Home</h1>
 			</div>
 
-			<div x-show="$store.tabs.current === 'about'">
+			<div class='p-8 rounded rounded-xl bg-white' x-show="$store.tabs.current === 'about'">
 				<h1>About</h1>
 			</div>
 
-			<div x-show="$store.tabs.current === 'projects'">
+			<div class='p-8 rounded rounded-xl bg-white' x-show="$store.tabs.current === 'projects'">
 				<h1>Projects</h1>
 			</div>
 
-			<div x-show="$store.tabs.current === 'contact'">
+			<div class='p-8 rounded rounded-xl bg-white' x-show="$store.tabs.current === 'contact'">
 				<h1>Contact</h1>
 			</div>
 
