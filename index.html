@@ -83,7 +83,8 @@
             }
 
 			.item-tag {
-				@apply text-white bg-slate-500 rounded-full text-3xl w-2/3 mx-auto text-center shadow-md shadow-gray-500 py-1 mb-6
+				@apply text-white bg-slate-500 rounded-full text-3xl 
+                w-2/3 mx-auto text-center shadow-md shadow-gray-500 py-1 mb-6 mt-4 md:mt-0
 			}
         }
 	</style>
@@ -139,44 +140,58 @@
 			</div>
 
 			<div class="py-4 text-gray-600 " x-show="$store.tabs.current === 'about'">
-				<div class='grid grid-cols-8 w-full space-x-4'>
+
+				<div class='flex flex-wrap md:grid md:grid-cols-8 w-full md:space-x-8'>
 
 					<!--===================================================================================-->
 
-					<div class='col-span-2 text-center'>
-						<!--<h1 class='text-green-700'>about me</h1>-->
-						<img src='images/cara_300x300_black.png'
-							 class='w-1/2 mx-auto rounded-full border border-white shadow-lg shadow-slate-600 contrast-50 hover:animate-spin hover:contrast-100'
-							 alt='face'>
+                    <div class='w-full sm:col-span-2'>
+						<img src='images/cara_300x300_black.png' class='w-1/4 mb-4 md:mb-0 md:w-1/2 mx-auto rounded-full border 
+                        border-white shadow-lg shadow-slate-600 
+                        contrast-50 hover:animate-spin hover:contrast-100' alt='face'>
 					</div>
+
+					<!-- <div class='col-span-2 text-center'> -->
+						<!--<h1 class='text-green-700'>about me</h1>-->
+						<!-- <img src='images/cara_300x300_black.png'
+							 class='w-1/2 mx-auto rounded-full border border-white shadow-lg shadow-slate-600 
+                             contrast-50 hover:animate-spin hover:contrast-100'
+							 alt='face'> -->
+					<!-- </div> -->
 					<div class='col-span-4'>
 						<h1 class='text-gray-500'>marcelo a. valdez</h1>
-						<p class='mb-2 text-justify'>
-							i am a technology & software entusiast with a background in
-							electronic engineering and embedded digital systems. i have a
-							passion for learning and building software
-							that could be useful to people.</p>
-						<p>
-							these are some of the technologies i am familiar with.
-						</p>
+                        <p class='mb-2 text-justify'>
+                            I am a technology & software entusiast with a background in
+                            electronic engineering and embedded digital systems. I have a
+                            passion for learning and building software
+                            that could be useful to people.
+                        </p>           
+                        <div class='flex my-4 space-x-2'>
+							<img src='images/argentina.jpg' class='w-1/2 shadow-md shadow-gray-700 rounded-xl' alt='cordoba'>
+							<img src='images/cordoba.jpg' class='w-1/2 shadow-md shadow-gray-700 rounded-xl' alt='cordoba'>
+                        </div>                     
 					</div>
 					<div class='col-span-2'>
 						<p class='text-slate-500 italic'>
-							i live in the beautiful city of córdoba, argentina.
+							I live in the beautiful city of Córdoba, Argentina.
 						</p>
-						<div class='flex my-4 space-x-2'>
-							<img src='images/argentina.jpg' class='w-1/2 shadow-md shadow-gray-700 rounded-xl' alt='cordoba'>
-							<img src='images/cordoba.jpg' class='w-1/2 shadow-md shadow-gray-700 rounded-xl' alt='cordoba'>
+						    
+                        <div>
+                            <img src='images/rio.jpg' class='mt-4 w-full shadow-md shadow-gray-700 rounded-xl' alt='cordoba'>
+						
+                            <p class='mt-2 italic text-center text-sm text-gray-500'>Córdoba (I took this one)</p>
 						</div>
 					</div>
 
 					<div class='col-span-full'>
 						<img src='images/divisor.png' class='mx-auto' alt=''>
+                        <p class="text-lg font-bold pb-8 text-center">
+                            Here are some of the technologies i am familiar with:
+                        </p>
 					</div>
 					<!--===================================================================================-->
 
 					<div class='col-span-2'>
-
 						<img src='images/php_600.png' class='w-2/3 mx-auto' alt='php'>
 					</div>
 					<div class='col-span-4'>
@@ -191,8 +206,8 @@
 							content.</p>
 					</div>
 					<div class='col-span-2'>
-						<img src='images/rio.jpg' class='mt-4 w-full shadow-md shadow-gray-700 rounded-xl' alt='cordoba'>
-						<p class='mt-2 italic text-center text-sm text-gray-500'>Córdoba (I took this one)</p>
+						<img src='images/php_code.jpg' class='mt-4 w-full shadow-md shadow-gray-700 rounded-xl' alt='cordoba'>
+						<p class='mt-2 italic text-center text-sm text-gray-500'>PHP Code</p>
 					</div>
 
 					<div class='col-span-full'>
