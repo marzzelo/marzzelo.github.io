@@ -1,0 +1,19 @@
+{
+  "name": "marzzelo.github.io",
+  "version": "1.0.0",
+  "description": "Personal Page",
+  "main": "alpine.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marzzelo/marzzelo.github.io.git"
+  },
+  "author": "Marcelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marzzelo/marzzelo.github.io/issues"
+  },
+  "homepage": "https://github.com/marzzelo/marzzelo.github.io#readme"
+}

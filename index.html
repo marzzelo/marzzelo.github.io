@@ -1,152 +1,241 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-        <title>Marcelo's Page</title>
+	<title>Marcelo's Page</title>
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" />
-        <link rel="shortcut icon" href="favicon.ico" />
+	<!-- Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"/>
+	<link rel="shortcut icon" href="favicon.ico"/>
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="normalize.css" />
-        <style type="text/tailwindcss">
-            @layer utilities {
-                h1 {
-                    @apply text-4xl font-semibold mb-4 text-gray-700;
-                }
-
-                h2 {
-                    @apply text-3xl font-bold mb-3 text-gray-700;
-                }
-
-                h3 {
-                    @apply text-2xl font-bold mb-2 text-gray-700;
-                }
-
-                h4 {
-                    @apply text-xl font-bold mb-2 text-gray-700;
-                }
-
-                .btn {
-                    @apply py-1 px-4 font-semibold text-sm rounded-lg shadow-md cursor-pointer;
-                }
-
-                .btn-gray {
-                    @apply border bg-white text-gray-800 hover:bg-gray-200;
-                }
-
-                .btn-red {
-                    @apply text-white bg-red-700 hover:bg-red-400;
-                }
-
-                .btn-blue {
-                    @apply text-white bg-blue-700 hover:bg-blue-400;
-                }
-
-                .btn-green {
-                    @apply text-white bg-green-800 hover:bg-green-600;
-                }
-
-                .btn-yellow {
-                    @apply text-white bg-yellow-700 hover:bg-yellow-400;
-                }
-
-                .button-blue {
-                    @apply py-1 px-4 bg-blue-500 text-white font-semibold rounded text-sm shadow-md hover:bg-blue-700;
-                }
-
-                .tag-gray {
-                    @apply rounded-lg px-2 bg-gray-400 text-white text-xs;
-                }
-
-                .tag-blue {
-                    @apply rounded-lg px-2 bg-blue-500 text-white text-xs;
-                }
-
-                .tag-green {
-                    @apply rounded-lg px-2 bg-green-500 text-white text-xs;
-                }
-
-                .tag-red {
-                    @apply rounded-lg px-2 bg-red-700 text-white text-xs;
-                }
-
-                .tag-yellow {
-                    @apply rounded-lg px-2 bg-yellow-500 text-white text-xs;
-                }
-
-                [x-cloak] {
-                    display: none !important;
-                }
+	<!-- Styles -->
+	<link rel="stylesheet" href="normalize.css"/>
+	<style type="text/tailwindcss">
+        @layer utilities {
+            h1 {
+                @apply text-4xl font-semibold mb-4 text-gray-700;
             }
-        </style>
 
-        <script src="https://cdn.tailwindcss.com"></script>
-        <!--suppress JSUnresolvedLibraryURL -->
-        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-        <script src="alpine.js"></script>
-    </head>
-    <body class="antialiased">
-        <div class="min-h-screen bg-gray-100">
-            <!-- Page Heading -->
-            <header class="bg-slate-800 text-white">
-                <div x-data class="w-full xl:max-w-6xl mx-auto shadow-lg">
-                    <div class="flex flex-col sm:flex-row sm:justify-around font-bold text-2xl sm:text-lg">
-                        <div
-                            @click="$store.tabs.current = 'home'"
-                            :class='{ "bg-blue-800 uppercase": $store.tabs.current === "home" }'
-                            class="hover:text-yellow-300 hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
-                        >
-                            home
-                        </div>
-                        <div
-                            @click="$store.tabs.current = 'about'"
-                            :class='{ "bg-blue-800 uppercase": $store.tabs.current === "about" }'
-                            class="hover:text-yellow-300 hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
-                        >
-                            about
-                        </div>
-                        <div
-                            @click="$store.tabs.current = 'projects'"
-                            :class='{ "bg-blue-800 uppercase": $store.tabs.current === "projects" }'
-                            class="hover:text-yellow-300 hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
-                        >
-                            projects
-                        </div>
-                        <div
-                            @click="$store.tabs.current = 'contact'"
-                            :class='{ "bg-blue-800 uppercase": $store.tabs.current === "contact" }'
-                            class="hover:text-yellow-300 hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
-                        >
-                            contact
-                        </div>
-                    </div>
-                </div>
-            </header>
+            h2 {
+                @apply text-3xl font-bold mb-3 text-gray-700;
+            }
 
-            <!-- Page Content -->
-            <main x-data>
-                <div x-cloak class="max-w-6xl mx-auto py-6 px-4 xl:px-0 min-h-screen">
-                    <div class="py-4" x-show="$store.tabs.current === 'home'">
-                        <h1>Home</h1>
-                    </div>
+            h3 {
+                @apply text-2xl font-bold mb-2 text-gray-700;
+            }
 
-                    <div class="py-4" x-show="$store.tabs.current === 'about'">
-                        <h1>About</h1>
-                    </div>
+            h4 {
+                @apply text-xl font-bold mb-2 text-gray-700;
+            }
 
-                    <div class="py-4" x-show="$store.tabs.current === 'projects'">
-                        <h1>Projects</h1>
-                    </div>
+            .btn {
+                @apply py-1 px-4 font-semibold text-sm rounded-lg shadow-md cursor-pointer;
+            }
 
-                    <div class="py-4" x-show="$store.tabs.current === 'contact'">
-                        <h1>Contact</h1>
-                    </div>
-                </div>
-            </main>
-        </div>
-    </body>
+            .btn-gray {
+                @apply border bg-white text-gray-800 hover:bg-gray-200;
+            }
+
+            .btn-red {
+                @apply text-white bg-red-700 hover:bg-red-400;
+            }
+
+            .btn-blue {
+                @apply text-white bg-blue-700 hover:bg-blue-400;
+            }
+
+            .btn-green {
+                @apply text-white bg-green-800 hover:bg-green-600;
+            }
+
+            .btn-yellow {
+                @apply text-white bg-yellow-700 hover:bg-yellow-400;
+            }
+
+            .button-blue {
+                @apply py-1 px-4 bg-blue-500 text-white font-semibold rounded text-sm shadow-md hover:bg-blue-700;
+            }
+
+            .tag-gray {
+                @apply rounded-lg px-2 bg-gray-400 text-white text-xs;
+            }
+
+            .tag-blue {
+                @apply rounded-lg px-2 bg-blue-500 text-white text-xs;
+            }
+
+            .tag-green {
+                @apply rounded-lg px-2 bg-green-500 text-white text-xs;
+            }
+
+            .tag-red {
+                @apply rounded-lg px-2 bg-red-700 text-white text-xs;
+            }
+
+            .tag-yellow {
+                @apply rounded-lg px-2 bg-yellow-500 text-white text-xs;
+            }
+
+            [x-cloak] {
+                display: none !important;
+            }
+
+			.item-tag {
+				@apply text-white bg-slate-500 rounded-full text-3xl w-2/3 mx-auto text-center shadow-md shadow-gray-500 py-1 mb-6
+			}
+        }
+	</style>
+
+	<script src="https://cdn.tailwindcss.com"></script>
+	<!--suppress JSUnresolvedLibraryURL -->
+	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	<script src="alpine.js"></script>
+</head>
+<body class="antialiased">
+<div class="min-h-screen bg-gray-100">
+	<!-- Page Heading -->
+	<header class="bg-slate-800 text-gray-200">
+		<div x-data class="w-full xl:max-w-6xl mx-auto shadow-lg">
+			<div class="flex flex-col sm:flex-row sm:justify-around text-2xl sm:text-lg">
+				<div
+						@click="$store.tabs.current = 'home'"
+						:class='{ "bg-slate-700 uppercase": $store.tabs.current === "home" }'
+						class="hover:text-white hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
+				>
+					home
+				</div>
+				<div
+						@click="$store.tabs.current = 'about'"
+						:class='{ "bg-slate-700 uppercase": $store.tabs.current === "about" }'
+						class="hover:text-white hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
+				>
+					about
+				</div>
+				<div
+						@click="$store.tabs.current = 'projects'"
+						:class='{ "bg-slate-700 uppercase": $store.tabs.current === "projects" }'
+						class="hover:text-white hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
+				>
+					projects
+				</div>
+				<div
+						@click="$store.tabs.current = 'contact'"
+						:class='{ "bg-slate-700 uppercase": $store.tabs.current === "contact" }'
+						class="hover:text-white hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
+				>
+					contact
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Page Content -->
+	<main x-data>
+		<div x-cloak class="max-w-6xl mx-auto py-6 px-4 xl:px-0 min-h-screen">
+			<div class="py-4" x-show="$store.tabs.current === 'home'">
+				<h1>Home</h1>
+			</div>
+
+			<div class="py-4 text-gray-600 " x-show="$store.tabs.current === 'about'">
+				<div class='grid grid-cols-8 w-full space-x-4'>
+
+					<!--===================================================================================-->
+
+					<div class='col-span-2 text-center'>
+						<!--<h1 class='text-green-700'>about me</h1>-->
+						<img src='images/cara_300x300_black.png'
+							 class='w-1/2 mx-auto rounded-full border border-white shadow-lg shadow-slate-600 contrast-50 hover:animate-spin hover:contrast-100'
+							 alt='face'>
+					</div>
+					<div class='col-span-4'>
+						<h1 class='text-gray-500'>marcelo a. valdez</h1>
+						<p class='mb-2 text-justify'>
+							i am a technology & software entusiast with a background in
+							electronic engineering and embedded digital systems. i have a
+							passion for learning and building software
+							that could be useful to people.</p>
+						<p>
+							these are some of the technologies i am familiar with.
+						</p>
+					</div>
+					<div class='col-span-2'>
+						<p class='text-slate-500 italic'>
+							i live in the beautiful city of córdoba, argentina.
+						</p>
+						<div class='flex my-4 space-x-2'>
+							<img src='images/argentina.jpg' class='w-1/2 shadow-md shadow-gray-700 rounded-xl' alt='cordoba'>
+							<img src='images/cordoba.jpg' class='w-1/2 shadow-md shadow-gray-700 rounded-xl' alt='cordoba'>
+						</div>
+					</div>
+
+					<div class='col-span-full'>
+						<img src='images/divisor.png' class='mx-auto' alt=''>
+					</div>
+					<!--===================================================================================-->
+
+					<div class='col-span-2'>
+
+						<img src='images/php_600.png' class='w-2/3 mx-auto' alt='php'>
+					</div>
+					<div class='col-span-4'>
+						<div class='item-tag'>PHP</div>
+						<p><strong>What can PHP do?</strong></p>
+						<p class='mt-1'>Anything. PHP is mainly focused on server-side scripting, so you can do anything any other CGI program can do, such as
+							collect form data, generate dynamic page content, or send and receive cookies. But PHP can do much more.</p>
+						<p class='mt-2'>With PHP you are not limited to output HTML. PHP's abilities includes outputting images, PDF files and even Flash movies
+							(using libswf and Ming) generated on the fly.</p>
+						<p class='mt-2'>You can also output easily any text, such as XHTML and any other XML file. PHP can
+							autogenerate these files, and save them in the file system, instead of printing it out, forming a server-side cache for your dynamic
+							content.</p>
+					</div>
+					<div class='col-span-2'>
+						<img src='images/rio.jpg' class='mt-4 w-full shadow-md shadow-gray-700 rounded-xl' alt='cordoba'>
+						<p class='mt-2 italic text-center text-sm text-gray-500'>Córdoba (I took this one)</p>
+					</div>
+
+					<div class='col-span-full'>
+						<img src='images/divisor.png' class='mx-auto' alt=''>
+					</div>
+					<!--===================================================================================-->
+
+					<div class='col-span-2'>
+
+						<img src='images/c++600.png' class='w-1/2 mx-auto' alt='c++'>
+					</div>
+					<div class='col-span-4'>
+						<div class='item-tag'>C / C++</div>
+						<p><strong>What can C++ do?</strong></p>
+						<p class='mt-1'>C++ can be found just about everywhere you look. It powers search engines, VR applications, air travel, movie
+							production, and even
+							exploration on Mars! In fact, C++ is one of the most widely-used programming languages there is.</p>
+
+						<p class='mt-2 font-bold'>What is embedded C++?</p>
+						<p class='mt-1'>Embedded C++ is a dialect of C++ that engineers developed in the late 1990s for embedded systems.
+							Embedded engineers seldom use the assembly
+							language anymore. They do use C++ in embedded systems a lot.</p>
+						<p class='mt-2'>I love programming embedded systems (like Arduino) using C++.</p>
+					</div>
+					<div class='col-span-2'>
+						<img src='images/c++embedded.jpg' class='mt-4 w-full shadow-md shadow-gray-700 rounded-xl' alt='embedded'>
+						<p class='mt-2 italic text-center text-sm text-gray-500'>I love Embedded C++</p>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<div class="py-4" x-show="$store.tabs.current === 'projects'">
+			<h1>Projects</h1>
+		</div>
+
+		<div class="py-4" x-show="$store.tabs.current === 'contact'">
+			<h1>Contact</h1>
+		</div>
+</div>
+</main>
+</div>
+</body>
 </html>
