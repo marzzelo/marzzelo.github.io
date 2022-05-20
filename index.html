@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta content="width=device-width, initial-scale=1" name="viewport"/>
 
 	<title>Marcelo's Page</title>
 
 	<!-- Fonts -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"/>
-	<link rel="shortcut icon" href="favicon.ico"/>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+	<link href="favicon.ico" rel="shortcut icon"/>
 
 	<!-- Styles -->
-	<link rel="stylesheet" href="normalize.css"/>
+	<link href="normalize.css" rel="stylesheet"/>
 	<style type="text/tailwindcss">
         @layer utilities {
             h1 {
@@ -28,6 +28,14 @@
 
             h4 {
                 @apply text-xl font-bold mb-2 text-gray-700;
+            }
+
+            p {
+                @apply text-gray-700 mt-2;
+            }
+
+            .title {
+                @apply text-lg font-bold text-slate-800;
             }
 
             .btn {
@@ -82,10 +90,10 @@
                 display: none !important;
             }
 
-			.item-tag {
-				@apply text-white bg-slate-500 rounded-full text-3xl 
+            .item-tag {
+                @apply text-white bg-slate-500 rounded-full text-3xl
                 w-2/3 mx-auto text-center shadow-md shadow-gray-500 py-1 mb-6 mt-4 md:mt-0
-			}
+            }
         }
 	</style>
 
@@ -98,32 +106,32 @@
 <div class="min-h-screen bg-gray-100">
 	<!-- Page Heading -->
 	<header class="bg-slate-800 text-gray-200">
-		<div x-data class="w-full xl:max-w-6xl mx-auto shadow-lg">
-			<div class="flex flex-col sm:flex-row sm:justify-around text-2xl sm:text-lg">
+		<div class="w-full xl:max-w-6xl mx-auto shadow-lg" x-data>
+			<div class="flex flex-col md:flex-row md:justify-around text-2xl md:text-lg">
 				<div
-						@click="$store.tabs.current = 'home'"
 						:class='{ "bg-slate-700 uppercase": $store.tabs.current === "home" }'
+						@click="$store.tabs.current = 'home'"
 						class="hover:text-white hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
 				>
 					home
 				</div>
 				<div
-						@click="$store.tabs.current = 'about'"
 						:class='{ "bg-slate-700 uppercase": $store.tabs.current === "about" }'
+						@click="$store.tabs.current = 'about'"
 						class="hover:text-white hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
 				>
 					about
 				</div>
 				<div
-						@click="$store.tabs.current = 'projects'"
 						:class='{ "bg-slate-700 uppercase": $store.tabs.current === "projects" }'
+						@click="$store.tabs.current = 'projects'"
 						class="hover:text-white hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
 				>
 					projects
 				</div>
 				<div
-						@click="$store.tabs.current = 'contact'"
 						:class='{ "bg-slate-700 uppercase": $store.tabs.current === "contact" }'
+						@click="$store.tabs.current = 'contact'"
 						class="hover:text-white hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
 				>
 					contact
@@ -134,107 +142,176 @@
 
 	<!-- Page Content -->
 	<main x-data>
-		<div x-cloak class="max-w-6xl mx-auto py-6 px-4 xl:px-0 min-h-screen">
+		<div class="max-w-6xl mx-auto py-6 px-4 xl:px-0 min-h-screen" x-cloak>
 			<div class="py-4" x-show="$store.tabs.current === 'home'">
 				<h1>Home</h1>
 			</div>
 
 			<div class="py-4 text-gray-600 " x-show="$store.tabs.current === 'about'">
 
-				<div class='flex flex-wrap md:grid md:grid-cols-8 w-full md:space-x-8'>
+				<div class='flex flex-wrap md:grid md:grid-cols-8 w-full md:space-x-8 mx-auto'>
 
 					<!--===================================================================================-->
 
-                    <div class='w-full sm:col-span-2'>
-						<img src='images/cara_300x300_black.png' class='w-1/4 mb-4 md:mb-0 md:w-1/2 mx-auto rounded-full border 
+					<div class='w-full md:col-span-2'>
+						<img alt='face' class='w-1/4 mb-4 md:mb-0 md:w-1/2 mx-auto rounded-full border
                         border-white shadow-lg shadow-slate-600 
-                        contrast-50 hover:animate-spin hover:contrast-100' alt='face'>
+                        contrast-50 hover:animate-spin hover:contrast-100' src='images/cara_300x300_black.png'>
 					</div>
 
-					<!-- <div class='col-span-2 text-center'> -->
-						<!--<h1 class='text-green-700'>about me</h1>-->
-						<!-- <img src='images/cara_300x300_black.png'
-							 class='w-1/2 mx-auto rounded-full border border-white shadow-lg shadow-slate-600 
-                             contrast-50 hover:animate-spin hover:contrast-100'
-							 alt='face'> -->
-					<!-- </div> -->
 					<div class='col-span-4'>
-						<h1 class='text-gray-500'>marcelo a. valdez</h1>
-                        <p class='mb-2 text-justify'>
-                            I am a technology & software entusiast with a background in
-                            electronic engineering and embedded digital systems. I have a
-                            passion for learning and building software
-                            that could be useful to people.
-                        </p> 
-                        <p class='mb-2 text-justify'>
-                            I live in the beautiful city of Córdoba, Argentina. 
-                            It is located at -31.38 south latitude and -64.18 west longitude.
-                        </p>           
-                        <div class='flex my-4 space-x-4 mr-4 justify-between'>
-							<img src='images/argentina.jpg' class='w-1/2 shadow-md shadow-gray-700 rounded-xl' alt='cordoba'>
-							<img src='images/cordoba.jpg' class='w-1/2 shadow-md shadow-gray-700 rounded-xl' alt='cordoba'>
-                        </div>                     
+						<h1 class='text-gray-500 text-center md:text-left'>marcelo a. valdez</h1>
+						<p class='mb-2 text-justify'>
+							I am a technology & software entusiast with a background in
+							<span class='text-green-700 italic'>electronic engineering</span> and <span class='text-green-700 italic'>embedded digital systems</span>. I have a
+							passion for learning and building software
+							that could be useful to people.
+						</p>
+						<p class='mb-2 text-justify'>
+							I live in the beautiful city of Córdoba, Argentina.
+							It is located at -31.38 south latitude and -64.18 west longitude.
+						</p>
+						<img alt='cordoba' class='shadow-md shadow-gray-700 rounded-xl mx-auto' src='images/argentina.jpg'>
 					</div>
-					<div class='col-span-2'>
-                        <div>
-                            <img src='images/rio.jpg' class='mt-4 w-full shadow-md shadow-gray-700 rounded-xl' alt='cordoba'>
-						
-                            <p class='mt-2 italic text-center text-sm text-gray-500'>Córdoba (I took this one)</p>
+					<div class='md:col-span-2 mx-auto'>
+						<div class='mx-auto'>
+							<img alt='cordoba' class='mt-4 w-full shadow-md shadow-gray-700 rounded-xl mx-auto' src='images/rio.jpg'>
+							<p class=' italic text-center text-sm text-gray-500'>Córdoba (I took this one)</p>
 						</div>
 					</div>
 
-					<div class='col-span-full'>
-						<img src='images/divisor.png' class='mx-auto' alt=''>
-                        <p class="text-lg font-bold pb-8 text-center">
-                            Here are some of the technologies i am familiar with:
-                        </p>
+					<div class='mx-auto md:col-span-full'>
+						<img alt='' class='mx-auto' src='images/divisor.png'>
+						<p class="text-lg font-bold mb-8 text-center rounded-full bg-slate-300">
+							Here are some of the technologies I am familiar with:
+						</p>
 					</div>
 					<!--===================================================================================-->
 
-					<div class='col-span-2'>
-						<img src='images/php_600.png' class='w-2/3 mx-auto' alt='php'>
+					<div class='md:col-span-2 mx-auto'>
+						<img alt='php' class='w-2/3 mx-auto' src='images/php_600.png'>
 					</div>
 					<div class='col-span-4'>
 						<div class='item-tag'>PHP</div>
-						<p><strong>What can PHP do?</strong></p>
-						<p class='mt-1'>Anything. PHP is mainly focused on server-side scripting, so you can do anything any other CGI program can do, such as
+						<p class='title'>What can PHP do?</p>
+						<p class=''>Anything. PHP is mainly focused on server-side scripting, so you can do anything any other CGI program can do, such as
 							collect form data, generate dynamic page content, or send and receive cookies. But PHP can do much more.</p>
-						<p class='mt-2'>With PHP you are not limited to output HTML. PHP's abilities includes outputting images, PDF files and even Flash movies
+						<p class=''>With PHP you are not limited to output HTML. PHP's abilities includes outputting images, PDF files and even Flash movies
 							(using libswf and Ming) generated on the fly.</p>
-						<p class='mt-2'>You can also output easily any text, such as XHTML and any other XML file. PHP can
+						<p class=''>You can also output easily any text, such as XHTML and any other XML file. PHP can
 							autogenerate these files, and save them in the file system, instead of printing it out, forming a server-side cache for your dynamic
 							content.</p>
 					</div>
-					<div class='col-span-2'>
-						<img src='images/php_code.jpg' class='mt-4 w-full shadow-md shadow-gray-700 rounded-xl' alt='cordoba'>
-						<p class='mt-2 italic text-center text-sm text-gray-500'>PHP Code</p>
+					<div class='md:col-span-2 mx-auto'>
+						<img alt='cordoba' class='mt-4 w-full shadow-md shadow-gray-700 rounded-xl' src='images/php_code.jpg'>
+						<p class=' italic text-center text-sm text-gray-500'>PHP Code</p>
 					</div>
 
-					<div class='col-span-full'>
-						<img src='images/divisor.png' class='mx-auto' alt=''>
+					<!--DIVISOR-->
+					<div class='md:col-span-full'>
+						<img alt='' class='mx-auto' src='images/divisor.png'>
 					</div>
 					<!--===================================================================================-->
 
+					<!--LEFT-->
 					<div class='col-span-2'>
-
-						<img src='images/c++600.png' class='w-1/2 mx-auto' alt='c++'>
+						<img alt='c++' class='w-1/2 mx-auto' src='images/c++600.png'>
 					</div>
+
+					<!--CENTER-->
 					<div class='col-span-4'>
 						<div class='item-tag'>C / C++</div>
-						<p><strong>What can C++ do?</strong></p>
-						<p class='mt-1'>C++ can be found just about everywhere you look. It powers search engines, VR applications, air travel, movie
+						<p class='title'>What can C++ do?</p>
+						<p class=''>C++ can be found just about everywhere you look. It powers search engines, VR applications, air travel, movie
 							production, and even
 							exploration on Mars! In fact, C++ is one of the most widely-used programming languages there is.</p>
 
-						<p class='mt-2 font-bold'>What is embedded C++?</p>
-						<p class='mt-1'>Embedded C++ is a dialect of C++ that engineers developed in the late 1990s for embedded systems.
+						<p class='title'>What is embedded C++?</p>
+						<p class=''>Embedded C++ is a dialect of C++ that engineers developed in the late 1990s for embedded systems.
 							Embedded engineers seldom use the assembly
 							language anymore. They do use C++ in embedded systems a lot.</p>
-						<p class='mt-2'>I love programming embedded systems (like Arduino) using C++.</p>
+						<p class=''>I love programming embedded systems (like Arduino) using C++.</p>
 					</div>
+
+					<!--RIGHT-->
+					<div class='md:col-span-2 mx-auto'>
+						<img alt='embedded' class='mt-4 w-full shadow-md shadow-gray-700 rounded-xl' src='images/c++embedded.jpg'>
+						<p class=' italic text-center text-sm text-gray-500'>I love Embedded C++</p>
+					</div>
+
+					<!--DIVISOR-->
+					<div class='md:col-span-full'>
+						<img alt='' class='mx-auto' src='images/divisor.png'>
+					</div>
+					<!--===================================================================================-->
+
+					<!--LEFT-->
 					<div class='col-span-2'>
-						<img src='images/c++embedded.jpg' class='mt-4 w-full shadow-md shadow-gray-700 rounded-xl' alt='embedded'>
-						<p class='mt-2 italic text-center text-sm text-gray-500'>I love Embedded C++</p>
+						<img alt='c++' class='mx-auto' src='images/laravel.webp'>
+					</div>
+
+					<!--CENTER-->
+					<div class='col-span-4'>
+						<div class='item-tag'>Laravel</div>
+						<p class='title'>The PHP Framework for Web Artisans</p>
+						<p class=''>Laravel is a web application framework with expressive, elegant syntax. A web framework provides a structure and
+							starting point for creating your application, allowing you to focus on creating something amazing.
+						</p>
+						<p class='title'>What is Laravel?</p>
+						<p class=''>Laravel strives to provide an amazing developer experience while providing powerful features such as thorough dependency
+							injection, an expressive database abstraction layer, queues and scheduled jobs, unit and integration testing, and more.
+						</p>
+						<p class='title'>I love Laravel!</p>
+						<p class=''>Whether you are new to PHP web frameworks or have years of experience, Laravel is a framework that can grow with you.
+							Laravel is incredibly scalable. Thanks to the scaling-friendly nature of PHP and Laravel's built-in support for fast, distributed
+							cache systems like Redis, horizontal scaling with Laravel is a breeze. In fact, Laravel applications have been easily scaled to
+							handle hundreds of millions of requests per month.</p>
+					</div>
+
+					<!--RIGHT-->
+					<div class='md:col-span-2 mx-auto'>
+						<img alt='embedded' class='mt-4 w-full shadow-md shadow-gray-700 rounded-xl' src='images/features-of-laravel.png'>
+						<p class=' italic text-center text-sm text-gray-500'>Laravel is full of features!</p>
+					</div>
+
+					<!--DIVISOR-->
+					<div class='md:col-span-full'>
+						<img alt='' class='mx-auto' src='images/divisor.png'>
+					</div>
+					<!--===================================================================================-->
+
+					<!--LEFT-->
+					<div class='col-span-2'>
+						<img alt='c++' class='mx-auto' src='images/html-js-css.png'>
+					</div>
+
+					<!--CENTER-->
+					<div class='col-span-4'>
+						<div class='item-tag'><span class='text-red-400'>Html</span>, <span class='text-green-500'>css</span> & <span class='text-yellow-300'>Javascript</span>
+						</div>
+						<p class='title'>HTML</p>
+						<p class=''>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web
+							browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+						</p>
+						<p class='title'>CSS</p>
+						<p class=''>CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.
+						</p>
+						<p>This separation can improve content accessibility; provide more flexibility and control in the specification of presentation
+							characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces
+							complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between
+							the pages that share the file and its formatting.
+						</p>
+						<p class='title'>Javascript</p>
+						<p class=''>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has
+							dynamic typing, prototype-based object-orientation, and first-class functions. </p><p>It is multi-paradigm, supporting event-driven,
+							functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates,
+							regular expressions, standard data structures, and the Document Object Model (DOM).</p>
+					</div>
+
+					<!--RIGHT-->
+					<div class='md:col-span-2 mx-auto'>
+						<img alt='embedded' class='mt-4 w-full shadow-md shadow-gray-700 rounded-xl' src='images/progressive-enhancement.png'>
+						<p class=' italic text-center text-sm text-gray-500'>HTML, CSS & Javascript</p>
 					</div>
 
 
