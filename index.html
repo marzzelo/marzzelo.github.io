@@ -91,8 +91,8 @@
             }
 
             .item-tag {
-                @apply text-white bg-slate-500 rounded-full text-3xl
-                w-2/3 mx-auto text-center shadow-md shadow-gray-500 py-1 mb-6 mt-4 md:mt-0
+                @apply text-white bg-slate-500 rounded-full text-xl sm:text-3xl px-2
+                sm:w-2/3 mx-auto text-center shadow-md shadow-gray-500 py-1 mb-6 mt-4 md:mt-0
             }
         }
 	</style>
@@ -103,7 +103,8 @@
 	<script src="alpine.js"></script>
 </head>
 <body class="antialiased">
-<div class="min-h-screen bg-gray-100">
+<div class="min-h-screen bg-gray-200">
+	<!--style='background-image: url("images/darkbubble.webp")'>-->
 	<!-- Page Heading -->
 	<header class="bg-slate-800 text-gray-200">
 		<div class="w-full xl:max-w-6xl mx-auto shadow-lg" x-data>
@@ -141,29 +142,31 @@
 	</header>
 
 	<!-- Page Content -->
-	<main x-data>
+	<main x-data class=''>
+
 		<div class="max-w-6xl mx-auto py-6 px-4 xl:px-0 min-h-screen" x-cloak>
+			<!--<div class='bg-gray-300 px-2'>-->
 			<div class="py-4" x-show="$store.tabs.current === 'home'">
 				<h1>Home</h1>
 			</div>
 
-			<div class="py-4 text-gray-600 " x-show="$store.tabs.current === 'about'">
+			<div class="sm:py-4 text-gray-600 " x-show="$store.tabs.current === 'about'">
 
 				<div class='flex flex-wrap md:grid md:grid-cols-8 w-full md:space-x-8 mx-auto'>
 
 					<!--===================================================================================-->
 
-					<div class='w-full md:col-span-2'>
-						<img alt='face' class='w-1/4 mb-4 md:mb-0 md:w-1/2 mx-auto rounded-full border
-                        border-white shadow-lg shadow-slate-600 
-                        contrast-50 hover:animate-spin hover:contrast-100' src='images/cara_300x300_black.png'>
+					<div class='w-full sm:col-span-2'>
+						<img alt='face' class='w-1/2 mb-4 sm:mb-0 mx-auto  shadow-lg shadow-slate-600 rounded-lg
+                        contrast-70 hover:animate- hover:contrast-100' src='images/monkey.jpg'>
 					</div>
 
 					<div class='col-span-4'>
 						<h1 class='text-gray-500 text-center md:text-left'>marcelo a. valdez</h1>
 						<p class='mb-2 text-justify'>
 							I am a technology & software entusiast with a background in
-							<span class='text-green-700 italic'>electronic engineering</span> and <span class='text-green-700 italic'>embedded digital systems</span>. I have a
+							<span class='text-green-700 italic'>electronic engineering</span> and <span
+								class='text-green-700 italic'>embedded digital systems</span>. I have a
 							passion for learning and building software
 							that could be useful to people.
 						</p>
@@ -182,7 +185,7 @@
 
 					<div class='mx-auto md:col-span-full'>
 						<img alt='' class='mx-auto' src='images/divisor.png'>
-						<p class="text-lg font-bold mb-8 text-center rounded-full bg-slate-300">
+						<p class="text-lg font-bold mb-8 text-center rounded-full bg-slate-300 px-4">
 							Here are some of the technologies I am familiar with:
 						</p>
 					</div>
@@ -199,7 +202,8 @@
 						<p class=''>With PHP you are not limited to output HTML. PHP's abilities includes outputting images, PDF files and even Flash movies
 							(using libswf and Ming) generated on the fly.</p>
 						<p class=''>You can also output easily any text, such as XHTML and any other XML file. PHP can
-							autogenerate these files, and save them in the file system, instead of printing it out, forming a server-side cache for your dynamic
+							autogenerate these files, and save them in the file system, instead of printing it out, forming a server-side cache for your
+							dynamic
 							content.</p>
 					</div>
 					<div class='md:col-span-2 mx-auto'>
@@ -263,7 +267,8 @@
 						</p>
 						<p class='title'>I love Laravel!</p>
 						<p class=''>Whether you are new to PHP web frameworks or have years of experience, Laravel is a framework that can grow with you.
-							Laravel is incredibly scalable. Thanks to the scaling-friendly nature of PHP and Laravel's built-in support for fast, distributed
+							Laravel is incredibly scalable. Thanks to the scaling-friendly nature of PHP and Laravel's built-in support for fast,
+							distributed
 							cache systems like Redis, horizontal scaling with Laravel is a breeze. In fact, Laravel applications have been easily scaled to
 							handle hundreds of millions of requests per month.</p>
 					</div>
@@ -287,7 +292,8 @@
 
 					<!--CENTER-->
 					<div class='col-span-4'>
-						<div class='item-tag'><span class='text-red-400'>Html</span>, <span class='text-green-500'>css</span> & <span class='text-yellow-300'>Javascript</span>
+						<div class='item-tag'><span class='text-red-400'>Html</span>, <span class='text-green-500'>css</span> & <span
+								class='text-yellow-300'>Javascript</span>
 						</div>
 						<p class='title'>HTML</p>
 						<p class=''>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web
@@ -297,13 +303,16 @@
 						<p class=''>CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.
 						</p>
 						<p>This separation can improve content accessibility; provide more flexibility and control in the specification of presentation
-							characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces
-							complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between
+							characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which
+							reduces
+							complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed
+							between
 							the pages that share the file and its formatting.
 						</p>
 						<p class='title'>Javascript</p>
 						<p class=''>JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has
-							dynamic typing, prototype-based object-orientation, and first-class functions. </p><p>It is multi-paradigm, supporting event-driven,
+							dynamic typing, prototype-based object-orientation, and first-class functions. </p>
+						<p>It is multi-paradigm, supporting event-driven,
 							functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates,
 							regular expressions, standard data structures, and the Document Object Model (DOM).</p>
 					</div>
@@ -314,20 +323,217 @@
 						<p class=' italic text-center text-sm text-gray-500'>HTML, CSS & Javascript</p>
 					</div>
 
+					<!--===================================================================================-->
+					<!--DIVISOR-->
+					<div class='md:col-span-full'>
+						<img alt='' class='mx-auto' src='images/divisor.png'>
+					</div>
+
+					<!--LEFT-->
+					<div class='col-span-2'>
+						<img alt='c++' class='mx-auto' src='images/html-js-css.png'>
+					</div>
+
+					<!--CENTER-->
+					<div class='col-span-4'>
+						<div class='item-tag'>More Technologies I love</div>
+						<p class='title'>Python & Kivy</p>
+						<p class=''>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse, sint. Culpa distinctio eaque eos excepturi,
+							facere
+							iure laboriosam laudantium magnam magni minima nisi odit optio porro sint, ut velit.
+						</p>
+						<p class='title'>Data Acquisition</p>
+						<p class=''>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cum cumque dolores expedita labore nesciunt soluta
+							tempore, voluptatem! Amet consequatur possimus quas! Adipisci est ipsum natus obcaecati unde vitae voluptas.
+						</p>
+						<p class='title'>Node.js</p>
+						<p class=''>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cumque, cupiditate dolor eius esse eum ex fugiat
+							impedit, inventore iusto molestias mollitia neque nobis nulla obcaecati quasi reiciendis. Enim, inventore.</p>
+						<p class='title'>Livewire</p>
+						<p class=''>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cumque, cupiditate dolor eius esse eum ex fugiat
+							impedit, inventore iusto molestias mollitia neque nobis nulla obcaecati quasi reiciendis. Enim, inventore.</p>
+						<p class='title'>Tailwind CSS</p>
+						<p class=''>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cumque, cupiditate dolor eius esse eum ex fugiat
+							impedit, inventore iusto molestias mollitia neque nobis nulla obcaecati quasi reiciendis. Enim, inventore.</p>
+						<p class='title'>Node.RED</p>
+						<p class=''>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cumque, cupiditate dolor eius esse eum ex fugiat
+							impedit, inventore iusto molestias mollitia neque nobis nulla obcaecati quasi reiciendis. Enim, inventore.</p>
+					</div>
+
+					<!--RIGHT-->
+					<div class='md:col-span-2 mx-auto'>
+						<img alt='embedded' class='mt-4 w-full shadow-md shadow-gray-700 rounded-xl' src='images/cordoba2.jpg'>
+						<p class=' italic text-center text-sm text-gray-500'>Córdoba, Argentina</p>
+					</div>
 
 				</div>
 			</div>
+
+			<div class="py-4 text-gray-600" x-show="$store.tabs.current === 'projects'">
+				<h1 class='text-gray-600'>Projects</h1>
+				<div class='px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl sm:text-3xl text-center font-bold text-white'>
+					Laboratory Instrumentation Control
+				</div>
+				<div class='p-4'>Some screen shots from my last project.</div>
+				<div class='flex justify-center my-2'>
+					<a href='images/projects/exp05.png'>
+						<img src='images/projects/exp05.png' alt='' class='rounded-lg shadow-lg'>
+					</a>
+				</div>
+
+				<!--DIVISOR-->
+				<div class='md:col-span-full'>
+					<img alt='' class='mx-auto' src='images/divisor.png'>
+				</div>
+
+				<div class='flex justify-center my-2'>
+					<a href='images/projects/exp01.png'>
+						<img src='images/projects/exp01.png' alt='' class='rounded-lg shadow-lg'>
+					</a>
+				</div>
+
+				<!--DIVISOR-->
+				<div class='md:col-span-full'>
+					<img alt='' class='mx-auto' src='images/divisor.png'>
+				</div>
+
+				<div class='flex justify-center my-2'>
+					<a href='images/projects/exp04.png'>
+						<img src='images/projects/exp04.png' alt='' class='rounded-lg shadow-lg'>
+					</a>
+				</div>
+
+				<!--DIVISOR-->
+				<div class='md:col-span-full'>
+					<img alt='' class='mx-auto' src='images/divisor.png'>
+				</div>
+
+				<div class='flex justify-center my-2'>
+					<a href='images/projects/instruments.png'>
+						<img src='images/projects/instruments.png' alt='' class='rounded-lg shadow-lg'>
+					</a>
+				</div>
+
+
+				<!--DIVISOR-->
+				<div class='md:col-span-full'>
+					<img alt='' class='mx-auto' src='images/divisor.png'>
+				</div>
+
+
+				<div class='flex justify-center my-2'>
+					<a href='images/projects/sets.png'>
+						<img src='images/projects/sets.png' alt='' class='rounded-lg shadow-lg'>
+					</a>
+				</div>
+
+				<!--DIVISOR-->
+				<div class='md:col-span-full'>
+					<img alt='' class='mx-auto' src='images/divisor.png'>
+				</div>
+
+
+				<div class='flex justify-center my-2'>
+					<a href='images/projects/search.png'>
+						<img src='images/projects/search.png' alt='' class='rounded-lg shadow-lg'>
+					</a>
+				</div>
+
+				<!--DIVISOR-->
+				<div class='md:col-span-full'>
+					<img alt='' class='mx-auto' src='images/divisor.png'>
+				</div>
+
+
+				<div class='flex justify-center my-2'>
+					<a href='images/projects/help.png'>
+						<img src='images/projects/help.png' alt='' class='rounded-lg shadow-lg'>
+					</a>
+				</div>
+
+				<!--DIVISOR-->
+				<div class='md:col-span-full'>
+					<img alt='' class='mx-auto' src='images/divisor.png'>
+				</div>
+
+				<div class='px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl sm:text-3xl text-center font-bold text-white'>Workshop
+					tool inventory
+				</div>
+				<div class='p-4'>Some screen shots from the tool inventory system.</div>
+
+				<div class='flex justify-center my-2'>
+					<a href='images/projects/exp03.png'>
+						<img src='images/projects/exp03.png' alt='' class='rounded-lg shadow-lg'>
+					</a>
+				</div>
+
+				<!--DIVISOR-->
+				<div class='md:col-span-full'>
+					<img alt='' class='mx-auto' src='images/divisor.png'>
+				</div>
+
+				<div class='p-4'><p class=' text-blue-600'>Of course, locker doors make sound when opened :-)</p></div>
+
+				<div class='flex justify-center my-2'>
+					<a href='images/projects/lockers.png'>
+						<img src='images/projects/lockers.png' alt='' class='rounded-lg shadow-lg'>
+					</a>
+				</div>
+
+				<!--DIVISOR-->
+				<div class='md:col-span-full'>
+					<img alt='' class='mx-auto' src='images/divisor.png'>
+				</div>
+
+				<div class='p-4'><p class=' text-blue-600'>Of course, tool boxes make a 'toolbox open' sound when opened :-)</p></div>
+
+				<div class='flex justify-center my-2'>
+					<a href='images/projects/toolboxes.png'>
+						<img src='images/projects/toolboxes.png' alt='' class='rounded-lg shadow-lg'>
+					</a>
+				</div>
+
+				<!--DIVISOR-->
+				<div class='md:col-span-full'>
+					<img alt='' class='mx-auto' src='images/divisor.png'>
+				</div>
+
+				<div class='px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl sm:text-3xl text-center font-bold text-white'>Control
+					Modules Management
+				</div>
+				<div class='p-4'><p>Some screen shots from the Control Modules Management system.</p>
+					<p>"Relative Error" Graphs are automatically generated.</p></div>
+
+				<div class='flex justify-center my-2'>
+					<a href='images/projects/modulos.png'>
+						<img src='images/projects/modulos.png' alt='' class='rounded-lg shadow-lg'>
+					</a>
+				</div>
+
+				<!--DIVISOR-->
+				<div class='md:col-span-full'>
+					<img alt='' class='mx-auto' src='images/divisor.png'>
+				</div>
+
+				<div class='px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl sm:text-3xl text-center font-bold text-white'>Load
+					Cells Management
+				</div>
+				<div class='p-4'>Some screen shots from the Load Cell Management system.</div>
+
+				<div class='flex justify-center my-2'>
+					<a href='images/projects/cells.png'>
+						<img src='images/projects/cells.png' alt='' class='rounded-lg shadow-lg'>
+					</a>
+				</div>
+
+			</div>
+
+			<div class="py-4" x-show="$store.tabs.current === 'contact'">
+				<h1>Contact</h1>
+			</div>
 		</div>
 
-		<div class="py-4" x-show="$store.tabs.current === 'projects'">
-			<h1>Projects</h1>
-		</div>
-
-		<div class="py-4" x-show="$store.tabs.current === 'contact'">
-			<h1>Contact</h1>
-		</div>
-</div>
-</main>
+	</main>
 </div>
 </body>
 </html>

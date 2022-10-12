@@ -2,7 +2,7 @@ document.addEventListener('alpine:init', () => {
 	window.Alpine = Alpine;
 
 	Alpine.store('tabs', {
-		current: 'about',
+		current: 'projects',
 		items: ['home', 'about', 'projects', 'contact'],
 	});
 });
