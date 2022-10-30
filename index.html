@@ -109,13 +109,13 @@
 	<header class="bg-slate-800 text-gray-200">
 		<div class="w-full xl:max-w-6xl mx-auto shadow-lg" x-data>
 			<div class="flex flex-col md:flex-row md:justify-around text-2xl md:text-lg">
-				<div
-						:class='{ "bg-slate-700 uppercase": $store.tabs.current === "home" }'
-						@click="$store.tabs.current = 'home'"
-						class="hover:text-white hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
-				>
-					home
-				</div>
+				<!--<div-->
+				<!--		:class='{ "bg-slate-700 uppercase": $store.tabs.current === "home" }'-->
+				<!--		@click="$store.tabs.current = 'home'"-->
+				<!--		class="hover:text-white hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"-->
+				<!--&gt;-->
+				<!--	home-->
+				<!--</div>-->
 				<div
 						:class='{ "bg-slate-700 uppercase": $store.tabs.current === "about" }'
 						@click="$store.tabs.current = 'about'"
@@ -146,9 +146,9 @@
 
 		<div class="max-w-6xl mx-auto py-6 px-4 xl:px-0 min-h-screen" x-cloak>
 			<!--<div class='bg-gray-300 px-2'>-->
-			<div class="py-4" x-show="$store.tabs.current === 'home'">
-				<h1>Home</h1>
-			</div>
+			<!--<div class="py-4" x-show="$store.tabs.current === 'home'">-->
+			<!--	<h1>Home</h1>-->
+			<!--</div>-->
 
 			<div class="sm:py-4 text-gray-600 " x-show="$store.tabs.current === 'about'">
 
@@ -157,8 +157,8 @@
 					<!--===================================================================================-->
 
 					<div class='w-full sm:col-span-2'>
-						<img alt='face' class='w-1/2 mb-4 sm:mb-0 mx-auto  shadow-lg shadow-slate-600 rounded-lg
-                        contrast-70 hover:animate- hover:contrast-100' src='images/monkey.jpg'>
+						<img alt='face' class='w-1/2 mb-4 sm:mb-0 mx-auto shadow-lg shadow-slate-600 rounded-lg
+                        contrast-70 animate hover:animate-spin' src='images/monkey.jpg'>
 					</div>
 
 					<div class='col-span-4'>
@@ -192,7 +192,7 @@
 					<!--===================================================================================-->
 
 					<div class='md:col-span-2 mx-auto'>
-						<img alt='php' class='w-2/3 mx-auto' src='images/php_600.png'>
+						<img alt='php' class='w-2/3 mx-auto animate hover:animate-ping' src='images/php_600.png'>
 					</div>
 					<div class='col-span-4'>
 						<div class='item-tag'>PHP</div>
@@ -219,7 +219,7 @@
 
 					<!--LEFT-->
 					<div class='col-span-2'>
-						<img alt='c++' class='w-1/2 mx-auto' src='images/c++600.png'>
+						<img alt='c++' class='w-1/2 mx-auto animate hover:animate-ping' src='images/c++600.png'>
 					</div>
 
 					<!--CENTER-->
@@ -251,7 +251,7 @@
 
 					<!--LEFT-->
 					<div class='col-span-2'>
-						<img alt='c++' class='mx-auto' src='images/laravel.webp'>
+						<img alt='c++' class='mx-auto animate hover:animate-ping' src='images/laravel.webp'>
 					</div>
 
 					<!--CENTER-->
@@ -287,7 +287,7 @@
 
 					<!--LEFT-->
 					<div class='col-span-2'>
-						<img alt='c++' class='mx-auto' src='images/html-js-css.png'>
+						<img alt='c++' class='mx-auto animate hover:animate-ping' src='images/html-js-css.png'>
 					</div>
 
 					<!--CENTER-->
@@ -326,12 +326,12 @@
 					<!--===================================================================================-->
 					<!--DIVISOR-->
 					<div class='md:col-span-full'>
-						<img alt='' class='mx-auto' src='images/divisor.png'>
+						<img alt='' class='mx-auto animate hover:animate-ping' src='images/divisor.png'>
 					</div>
 
 					<!--LEFT-->
 					<div class='col-span-2'>
-						<img alt='c++' class='mx-auto' src='images/node-red-logo.png'>
+						<img alt='c++' class='mx-auto animate hover:animate-ping' src='images/node-red-logo.png'>
 					</div>
 
 					<!--CENTER-->
@@ -354,12 +354,12 @@
 					<!--===================================================================================-->
 					<!--DIVISOR-->
 					<div class='md:col-span-full'>
-						<img alt='' class='mx-auto' src='images/divisor.png'>
+						<img alt='' class='mx-auto animate hover:animate-ping' src='images/divisor.png'>
 					</div>
 
 					<!--LEFT-->
 					<div class='col-span-2'>
-						<img alt='c++' class='mx-auto' src='images/labview-logo.png'>
+						<img alt='c++' class='mx-auto animate hover:animate-ping' src='images/labview-logo.png'>
 					</div>
 
 					<!--CENTER-->
@@ -382,12 +382,17 @@
 					<!--===================================================================================-->
 					<!--DIVISOR-->
 					<div class='md:col-span-full'>
-						<img alt='' class='mx-auto' src='images/divisor.png'>
+						<img alt='' class='mx-auto animate hover:animate-ping' src='images/divisor.png'>
 					</div>
 
 					<!--LEFT-->
 					<div class='col-span-2'>
-						<img alt='c++' class='mx-auto' src='images/html-js-css.png'>
+						<img alt='c++' class='mx-auto my-8 animate hover:animate-ping' src='images/html-js-css.png'>
+						<img alt='livewire' class='mx-auto my-8 animate hover:animate-ping' src='images/livewire.png'>
+						<img alt='nodejs' class='mx-auto my-8 animate hover:animate-ping' src='images/nodejs.png'>
+						<img alt='python' class='mx-auto my-8 p-2 animate hover:animate-ping' src='images/Python.png'>
+						<img alt='tailwind' class='mx-auto my-8 p-2 animate hover:animate-ping' src='images/tailwind.png'>
+
 					</div>
 
 					<!--CENTER-->
@@ -427,7 +432,7 @@
 			<div class="py-4 text-gray-600" x-show="$store.tabs.current === 'projects'">
 				<h1 class='text-gray-600'>Projects</h1>
 				<div class='px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl sm:text-3xl text-center font-bold text-white'>
-					Laboratory Instrumentation Control
+					Laboratory Instrumentation
 				</div>
 				<div class='p-4'>Some screen shots from my last project.</div>
 				<div class='flex justify-center my-2'>
@@ -527,7 +532,7 @@
 					<img alt='' class='mx-auto' src='images/divisor.png'>
 				</div>
 
-				<div class='p-4'><p class=' text-blue-600'>Of course, locker doors make sound when opened :-)</p></div>
+				<div class='p-4'><p class=' text-blue-600'>Locker doors make sound when opened :-)</p></div>
 
 				<div class='flex justify-center my-2'>
 					<a href='images/projects/lockers.png'>
@@ -540,7 +545,7 @@
 					<img alt='' class='mx-auto' src='images/divisor.png'>
 				</div>
 
-				<div class='p-4'><p class=' text-blue-600'>Of course, tool boxes make a 'toolbox open' sound when opened :-)</p></div>
+				<div class='p-4'><p class=' text-blue-600'>And tool boxes make a 'toolbox open' sound when opened :-)</p></div>
 
 				<div class='flex justify-center my-2'>
 					<a href='images/projects/toolboxes.png'>
@@ -554,9 +559,9 @@
 				</div>
 
 				<div class='px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl sm:text-3xl text-center font-bold text-white'>Control
-					Modules Management
+					Hydraulic Power Modules Management System
 				</div>
-				<div class='p-4'><p>Some screen shots from the Control Modules Management system.</p>
+				<div class='p-4'><p>Some screen shots from the Hydraulic Power Modules Management system.</p>
 					<p>"Relative Error" Graphs are automatically generated.</p></div>
 
 				<div class='flex justify-center my-2'>
@@ -571,7 +576,7 @@
 				</div>
 
 				<div class='px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl sm:text-3xl text-center font-bold text-white'>Load
-					Cells Management
+					Load Cells Management System
 				</div>
 				<div class='p-4'>Some screen shots from the Load Cell Management system.</div>
 
@@ -584,7 +589,12 @@
 			</div>
 
 			<div class="py-4" x-show="$store.tabs.current === 'contact'">
-				<h1>Contact</h1>
+				<h1 class='text-gray-600'>Contact</h1>
+				<div class='px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl sm:text-3xl text-center font-bold text-white'>
+					<!-- link to zedlavo.lecram@gmail.com email -->
+					<a href='mailto:zedlavo.lecram@gmail.com?subject=Query from your github page&body=First of all, you are the best.%0D%0A%0D%0A[complete your query here]' class='text-white'>zedlavolecram@gmail.com</a>
+				</div>
+				<div class='p-4'></div>
 			</div>
 		</div>
 
