@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8"/>
 	<meta content="width=device-width, initial-scale=1" name="viewport"/>
 
-	<title>Marcelo's Page</title>
+        <title>Página de Marcelo</title>
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
@@ -139,27 +139,27 @@
 				<!--&gt;-->
 				<!--	home-->
 				<!--</div>-->
-				<div
-						:class='{ "bg-slate-700 uppercase": $store.tabs.current === "about" }'
-						@click="$store.tabs.current = 'about'"
-						class="hover:text-white hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
-				>
-					about
-				</div>
-				<div
-						:class='{ "bg-slate-700 uppercase": $store.tabs.current === "projects" }'
-						@click="$store.tabs.current = 'projects'"
-						class="hover:text-white hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
-				>
-					projects
-				</div>
-				<div
-						:class='{ "bg-slate-700 uppercase": $store.tabs.current === "contact" }'
-						@click="$store.tabs.current = 'contact'"
-						class="hover:text-white hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
-				>
-					contact
-				</div>
+                                <div
+                                                :class='{ "bg-slate-700 uppercase": $store.tabs.current === "about" }'
+                                                @click="$store.tabs.current = 'about'"
+                                                class="hover:text-white hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
+                                >
+                                        sobre mí
+                                </div>
+                                <div
+                                                :class='{ "bg-slate-700 uppercase": $store.tabs.current === "projects" }'
+                                                @click="$store.tabs.current = 'projects'"
+                                                class="hover:text-white hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
+                                >
+                                        proyectos
+                                </div>
+                                <div
+                                                :class='{ "bg-slate-700 uppercase": $store.tabs.current === "contact" }'
+                                                @click="$store.tabs.current = 'contact'"
+                                                class="hover:text-white hover:text-3xl sm:hover:text-xl w-full mx-auto text-center py-2 sm:py-1 cursor-pointer"
+                                >
+                                        contacto
+                                </div>
 			</div>
 		</div>
 	</header>
@@ -453,7 +453,7 @@
 			</div>
 
 			<div class="py-4 text-gray-600" x-show="$store.tabs.current === 'projects'">
-				<h1 class='text-gray-600'>Projects</h1>
+                                <h1 class='text-gray-600'>Proyectos</h1>
 				<div class='px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl sm:text-3xl text-center font-bold text-white'>
 					Laboratory Instrumentation
 				</div>
@@ -612,7 +612,7 @@
 			</div>
 
 			<div class="py-4" x-show="$store.tabs.current === 'contact'">
-				<h1 class='text-gray-600'>Contact</h1>
+                                <h1 class='text-gray-600'>Contacto</h1>
 				<div class='px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl sm:text-3xl text-center font-bold text-white'>
 					<!-- link to zedlavo.lecram@gmail.com email -->
 					<a href='mailto:zedlavo.lecram@gmail.com?subject=Query from your github page&body=First of all, you are the best.%0D%0A%0D%0A[complete your query here]' class='text-white'>zedlavo.lecram@gmail.com</a>
